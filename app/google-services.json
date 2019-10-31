@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "119945746281",
+    "firebase_url": "https://anuncios-1ffd3.firebaseio.com",
+    "project_id": "anuncios-1ffd3",
+    "storage_bucket": "anuncios-1ffd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119945746281:android:4b8cf5bee84dd365a18ff8",
+        "android_client_info": {
+          "package_name": "projetomobile.cadastro.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119945746281-pt0p7v38kgke1nb005jbb434reha3k5m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "projetomobile.cadastro.com",
+            "certificate_hash": "8c95325f855fc587adf7f0ff2f707874652ebe73"
+          }
+        },
+        {
+          "client_id": "119945746281-ovknlmtn17inqtgav34o56v9nos57oos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeBQQINpC_8YqvPjMEjMBKXlYWjqoLlfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119945746281-ovknlmtn17inqtgav34o56v9nos57oos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
