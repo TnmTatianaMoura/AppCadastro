@@ -87,7 +87,9 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
 
 
 
-
+    /**
+     * Salvar cadastro no banco de dados
+     */
     public void salvarAnuncio(){
 
         dialog = new SpotsDialog.Builder()
