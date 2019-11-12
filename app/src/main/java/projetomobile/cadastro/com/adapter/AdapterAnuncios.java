@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -36,11 +38,21 @@ public class AdapterAnuncios extends RecyclerView.Adapter<AdapterAnuncios.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+        Anuncio anuncio = anuncios.get(position);
+        holder.titulo.setText( anuncio.getTitulo() );
+        holder.valor.setText(anuncio.getValor());
+
+        //Pega a primeira imagem da lista
+        List<String> urlFotos = anuncio.getFotos();
+        String urlCapa = urlFotos.get(0);
+
+        Picasso.get().load(urlCapa).into(holder.foto);
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return anuncios.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -50,6 +62,10 @@ public class AdapterAnuncios extends RecyclerView.Adapter<AdapterAnuncios.MyView
         ImageView foto;
         public MyViewHolder (View itenView){
             super(itenView);
+
+            titulo = itenView.findViewById(R.id.textTitulo);
+            valor = itenView.findViewById(R.id.textPreco);
+            foto = itenView.findViewById(R.id.imageAnuncio);
         }
 
     }
