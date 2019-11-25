@@ -50,8 +50,6 @@ import projetomobile.cadastro.com.model.Anuncio;
 public class CadastrarAnuncioActivity extends AppCompatActivity
         implements View.OnClickListener {
 
-
-
     private EditText campoTitulo, campoDescricao;
     private ImageView imagem1, imagem2, imagem3;
     private Spinner campoEstado, campoCategoria;
@@ -85,8 +83,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         carregarDadosSpinner();
     }
 
-
-
     /**
      * Salvar cadastro no banco de dados
      */
@@ -109,9 +105,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         }
 
     }
-
-
-
 
     private void salvarFotoStorage(String urlString, final int totalFotos, int contador){
 
@@ -152,11 +145,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
 
     }
 
-
-
-
-
-
     private Anuncio configurarAnuncio(){
 
         String estado = campoEstado.getSelectedItem().toString();
@@ -177,7 +165,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         return anuncio;
 
     }
-
 
     public void validarDadosAnuncio(View view){
 
@@ -240,16 +227,10 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
 
     }
 
-
-
-
     public void escolherImagem(int requestCode){
         Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(i, requestCode);
     }
-
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -276,10 +257,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         }
     }
 
-
-
-
-
     private void carregarDadosSpinner() {
 
         //Configura spinner de estados
@@ -300,12 +277,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         adapterCategoria.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         campoCategoria.setAdapter(adapterCategoria);
     }
-
-
-
-
-
-
 
     private void inicializarComponentes() {
         campoTitulo = findViewById(R.id.editTitulo);
@@ -329,11 +300,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         campoValor.setLocale(locale);
     }
 
-
-
-
-
-
     @Override
     public void onRequestPermissionsResult
             (int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -346,10 +312,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         }
 
     }
-
-
-
-
 
     //não dando permissão de acesso a galeria
     private void alertaValidacaoPermissao(){
@@ -367,7 +329,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
 
         AlertDialog dialog = builder.create();
         dialog.show();
-
     }
 
 }

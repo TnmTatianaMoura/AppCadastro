@@ -74,24 +74,6 @@ public class Anuncio implements Serializable {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public String getIdAnuncio() {
         return idAnuncio;
     }

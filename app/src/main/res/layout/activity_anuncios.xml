@@ -17,9 +17,10 @@
         <Button
             android:id="@+id/buttonRegiao"
             style="?attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="filtrarPorEstado"
             android:text="Região"
             android:textColor="@color/colorPrimary" />
 
@@ -35,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="filtrarPorCategoria"
             android:text="Categoria"
             android:textColor="@color/colorPrimary" />
     </LinearLayout>

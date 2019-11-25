@@ -50,10 +50,6 @@ public class MeusAnunciosActivity extends AppCompatActivity {
         //Metodo Inicializar componentes
         inicializarComponentes();
 
-
-
-
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

@@ -33,8 +33,15 @@
     </string-array>
 
     <string-array name="categorias">
-        <item>Feminino</item>
-        <item>Masculino</item>
+        <item>Calça</item>
+        <item>Blusas</item>
+        <item>Cropped</item>
+        <item>Blusas Rendas</item>
+        <item>Short</item>
+        <item>Macacão</item>
+        <item>Vestido</item>
+        <item>Calça Pantalona</item>
+        <item>Top</item>
     </string-array>
 
 </resources>
