@@ -1,6 +1,5 @@
 package projetomobile.cadastro.com.activity;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -23,7 +22,6 @@ import java.util.List;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import dmax.dialog.SpotsDialog;
 import projetomobile.cadastro.com.R;
 import projetomobile.cadastro.com.adapter.AdapterAnuncios;
 import projetomobile.cadastro.com.helper.ConfiguracaoFirebase;
@@ -35,7 +33,6 @@ public class MeusAnunciosActivity extends AppCompatActivity {
     private List<Anuncio> anuncios =new ArrayList<>();
     private AdapterAnuncios adapterAnuncios;
     private DatabaseReference anuncioUsuarioRef;
-    private AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,13 +100,6 @@ public class MeusAnunciosActivity extends AppCompatActivity {
 
         private void recuperarAnuncios(){
 
-            dialog = new SpotsDialog.Builder()
-                    .setContext( this )
-                    .setMessage("Recuperando anúncios")
-                    .setCancelable( false )
-                    .build();
-            dialog.show();
-
             anuncioUsuarioRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
@@ -121,8 +111,6 @@ public class MeusAnunciosActivity extends AppCompatActivity {
 
                     Collections.reverse( anuncios );
                     adapterAnuncios.notifyDataSetChanged();
-
-                    dialog.dismiss();
 
                 }
 
@@ -137,6 +125,8 @@ public class MeusAnunciosActivity extends AppCompatActivity {
       public void inicializarComponentes(){
 
         recyclerAnuncios = findViewById(R.id.recyclerAnuncios);
+
+
     }
 
 }

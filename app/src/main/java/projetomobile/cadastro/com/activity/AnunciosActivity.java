@@ -81,7 +81,7 @@ public class AnunciosActivity extends AppCompatActivity {
                                 Anuncio anuncioSelecionado = listaAnuncios.get( position );
                                 Intent i = new Intent(AnunciosActivity.this, DetalhesProdutoActivity.class);
                                 i.putExtra("anuncioSelecionado", anuncioSelecionado );
-                                startActivity( i );
+                                startActivity( i );//estou aqui
                             }
 
                             @Override

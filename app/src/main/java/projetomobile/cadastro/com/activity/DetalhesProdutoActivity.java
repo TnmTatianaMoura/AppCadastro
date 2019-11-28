@@ -29,17 +29,19 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhes_produto);
+        //Inicializar componentes de interface
+        inicializarComponentes();
+        //o certo é aqui
 
         //Configurar toolbar
         getSupportActionBar().setTitle("Detalhe produto");
 
-        //Inicializar componentes de interface
-        inicializarComponentes();
+
 
         //Recupera anúncio para exibição
         anuncioSelecionado = (Anuncio) getIntent().getSerializableExtra("anuncioSelecionado");
 
-        if( anuncioSelecionado != null ){
+       if( anuncioSelecionado != null ){
 
             titulo.setText( anuncioSelecionado.getTitulo() );
             descricao.setText( anuncioSelecionado.getDescricao() );
@@ -58,12 +60,15 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
             carouselView.setImageListener( imageListener );
         }
 
+
+
         }
        public void visualizarTelefone(View view){
         Intent i = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",
                 anuncioSelecionado.getTelefone(), null ));
         startActivity( i );
     }
+
 
     private void inicializarComponentes(){
         carouselView = findViewById(R.id.carouselView);
