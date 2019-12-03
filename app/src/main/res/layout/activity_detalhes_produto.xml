@@ -35,7 +35,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray" />
@@ -48,7 +48,7 @@
         android:padding="8dp"
         android:text="DF" />
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginBottom="8dp"
@@ -68,6 +68,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ver Teleone"
-        android:theme="@style/botaopadrao"/>
+        android:theme="@style/botaopadrao" />
 
 </LinearLayout>
